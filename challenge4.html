@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Challenge 4 - Bug Finder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      text-align: center;
+      padding: 30px;
+      color: #222;
+    }
+    .back {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+    .challenge-box {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      margin: auto;
+      max-width: 700px;
+    }
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      margin-top: 20px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1.2em;
+      background: #e53935;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="back"><a href="index.html">⬅️ Back to Home</a></div>
+
+  <div class="challenge-box">
+    <h1>Challenge 4: Bug Finder</h1>
+    <p>Fix the code that's not working and make it run!</p>
+    <iframe src="https://blockly-demo.appspot.com/static/demos/rtl/index.html"></iframe>
+    <button onclick="markComplete()">✅ I Did It!</button>
+    <p id="feedback"></p>
+  </div>
+
+  <script>
+    function markComplete() {
+      localStorage.setItem('challenge4', 'complete');
+      document.getElementById('feedback').textContent = 'Bug squashed! Badge unlocked: Bug Buster 🐞';
+    }
+  </script>
+</body>
+</html>

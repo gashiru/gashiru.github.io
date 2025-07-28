@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Challenge 3 - Loop Champ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(to right, #c2e9fb, #a1c4fd);
+      text-align: center;
+      padding: 30px;
+      color: #222;
+    }
+    .back {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+    .challenge-box {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      margin: auto;
+      max-width: 700px;
+    }
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      margin-top: 20px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1.2em;
+      background: #1e88e5;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="back"><a href="index.html">⬅️ Back to Home</a></div>
+
+  <div class="challenge-box">
+    <h1>Challenge 3: Loop Champ</h1>
+    <p>Use a loop to repeat an action 5 times!</p>
+    <iframe src="https://blockly.games/?lang=en&level=4&app=maze"></iframe>
+    <button onclick="markComplete()">✅ I Did It!</button>
+    <p id="feedback"></p>
+  </div>
+
+  <script>
+    function markComplete() {
+      localStorage.setItem('challenge3', 'complete');
+      document.getElementById('feedback').textContent = 'Loop-tastic! Badge unlocked: Loop Master 🔁';
+    }
+  </script>
+</body>
+</html>
