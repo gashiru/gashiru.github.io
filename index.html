@@ -1,87 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Code with Ite</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
       font-family: 'Comic Sans MS', cursive, sans-serif;
-      background: linear-gradient(to right, #b2fefa, #0ed2f7);
-      color: #333;
+      background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+      margin: 0;
+      padding: 20px;
       text-align: center;
-      padding: 30px;
     }
     h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
+      font-size: 2.5em;
+    }
+    .banner-img {
+      width: 150px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      margin-top: 10px;
+    }
+    .challenges {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin: 10px;
+      padding: 20px;
+      width: 250px;
+      text-align: center;
+    }
+    .card.locked {
+      opacity: 0.5;
+    }
+    .card a {
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+    }
+    .badges {
+      margin-top: 40px;
     }
     .badge {
       display: inline-block;
-      background-color: white;
-      border: 2px solid #000;
-      border-radius: 10px;
-      padding: 10px;
       margin: 10px;
-      width: 180px;
-      opacity: 0.4;
-      transition: 0.3s;
+      padding: 10px;
+      border-radius: 8px;
+      background: #eee;
     }
     .badge.unlocked {
-      opacity: 1;
-      border-color: green;
-      box-shadow: 0 0 10px green;
+      background: #d4edda;
+      border: 2px solid #28a745;
     }
-    iframe {
-      width: 100%;
-      height: 90vh;
-      border: none;
-    }
-    .challenges {
-      text-align: left;
-      margin-top: 40px;
-    }
-    .challenge {
-      background: white;
-      border-radius: 10px;
-      padding: 15px;
-      margin: 10px auto;
-      width: 80%;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-    .challenge a {
-      text-decoration: none;
-      color: #0077cc;
-      font-weight: bold;
-    }
-    .editor {
-      margin-top: 50px;
-    }
-    .external {
-      display: block;
-      margin-top: 10px;
-      font-size: 1em;
-      color: #0077cc;
+    .side-img {
+      width: 180px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
-  <h1>Welcome to Code with Ite!</h1>
+  <h1>Welcome to Code with Ite 👋</h1>
   <p><strong>Built by Uncle Ayo 🧠💥</strong></p>
-  <p>This is your very own coding world. Complete fun challenges. Earn epic badges. Show everyone what you can do!</p>
+  <img src="ite_pose.jpg" alt="Ite posing" class="banner-img" />
+  <p>Choose a challenge and unlock your coding badges. Let’s gooo!</p>
 
   <div class="challenges">
-    <h2>🔧 Starter Challenges</h2>
-    <div class="challenge"><a href="challenge1.html">👉 Move the Robot</a><br>Make the robot move forward 3 steps</div>
-    <div class="challenge"><a href="challenge2.html">👉 Light It Up</a><br>Turn on a light when button is clicked</div>
-    <div class="challenge"><a href="challenge3.html">👉 Loop Champ</a><br>Use a loop to repeat an action 5 times</div>
-    <div class="challenge"><a href="challenge4.html">👉 Bug Finder</a><br>Fix the bug in the block code</div>
-    <div class="challenge"><a href="challenge5.html">👉 Animation Star</a><br>Make a character wave and say hello</div>
+    <div class="card">
+      <a href="challenge1.html">🔧 Challenge 1: Move the Robot</a>
+    </div>
+    <div class="card locked">
+      🔒 Challenge 2: Light It Up
+    </div>
+    <div class="card locked">
+      🔒 Challenge 3: Loop Champ
+    </div>
+    <div class="card locked">
+      🔒 Challenge 4: Bug Finder
+    </div>
+    <div class="card locked">
+      🔒 Challenge 5: Animation Star
+    </div>
   </div>
 
+  <img src="ite_baby.jpg" alt="Little Ite" class="side-img" />
+
   <div class="badges">
-    <h2>🏅 Badges to Earn</h2>
+    <h2>🏅 Your Badges</h2>
     <div id="badge1" class="badge">🥉 Starter Coder</div>
     <div id="badge2" class="badge">🟡 Button Master</div>
     <div id="badge3" class="badge">🌀 Loop Master</div>
@@ -89,34 +101,14 @@
     <div id="badge5" class="badge">✨ Code Artist</div>
   </div>
 
-  <div class="editor">
-    <h2>🧱 Blockly Playground</h2>
-    <p>Want to play around freely? Try it below!</p>
-    <iframe src="https://blockly-demo.appspot.com/static/demos/code/index.html"></iframe>
-    <a class="external" href="https://blockly-demo.appspot.com/static/demos/code/index.html" target="_blank">🔗 Open in Fullscreen</a>
-  </div>
-
   <script>
-    function showBadges() {
-      let newlyUnlocked = false;
+    window.onload = () => {
       for (let i = 1; i <= 5; i++) {
         if (localStorage.getItem(`challenge${i}`) === 'complete') {
-          const badge = document.getElementById(`badge${i}`);
-          if (!badge.classList.contains('unlocked')) {
-            newlyUnlocked = true;
-          }
-          badge.classList.add('unlocked');
+          document.getElementById(`badge${i}`).classList.add('unlocked');
         }
       }
-      if (newlyUnlocked) {
-        confetti({
-          particleCount: 100,
-          spread: 70,
-          origin: { y: 0.6 }
-        });
-      }
     }
-    window.onload = showBadges;
   </script>
 </body>
 </html>
