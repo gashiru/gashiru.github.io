@@ -17,7 +17,14 @@
   <div class="container-lg mt-4">
   <h1>Welcome to Code with Ite 👋</h1>
   <p><strong>Built by Uncle Ayo 🧠💥</strong></p>
-  <img src="ite_pose.jpg" alt="Ite posing" class="banner-img" />
+  <div class="row align-items-center mb-3">
+    <div class="col-12 col-lg-6">
+      <img id="pose-img" src="ite_pose.jpg" alt="Ite posing" class="banner-img rounded-square" onclick="togglePoseShape()" />
+    </div>
+    <div class="col-12 col-lg-6">
+      <img id="baby-img" src="ite_baby.jpg" alt="Little Ite" class="side-img rounded-square" onclick="toggleBabyShape()" />
+    </div>
+  </div>
   <p>Choose a challenge and unlock your coding badges. Let’s gooo!</p>
 
   <div class="challenges">
@@ -25,8 +32,6 @@
       <a href="challenge1.html" class="btn btn-primary">🔧 Challenges</a>
     </div>
   </div>
-
-  <img src="ite_baby.jpg" alt="Little Ite" class="side-img" />
 
   <div class="badges">
     <h2>🏅 Your Badges</h2>
@@ -47,6 +52,14 @@
           document.getElementById(`badge${i}`).classList.add('unlocked');
         }
       }
+    }
+
+    function togglePoseShape() {
+      document.getElementById('pose-img').classList.toggle('rounded-circle');
+    }
+
+    function toggleBabyShape() {
+      document.getElementById('baby-img').classList.toggle('clip-star');
     }
   </script>
 </body>
