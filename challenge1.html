@@ -11,7 +11,7 @@
 <body>
 <nav class="navbar navbar-light bg-light mb-3">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.html">Code with Ite <img src="ite_pose.jpg" alt="Ite" class="banner-img"/></a>
+    <a class="navbar-brand" href="index.html">Code with Ite <img id="nav-pose" src="ite_pose.jpg" alt="Ite" class="banner-img rounded-square" onclick="toggleNavShape()"/></a>
   </div>
 </nav>
   <div class="container-lg mt-4">
@@ -28,6 +28,10 @@
     function markComplete() {
       localStorage.setItem('challenge1', 'complete');
       document.getElementById('feedback').textContent = 'Great job, Ite! Badge unlocked: Starter Coder 🎉';
+    }
+
+    function toggleNavShape() {
+      document.getElementById('nav-pose').classList.toggle('rounded-circle');
     }
   </script>
 </body>
