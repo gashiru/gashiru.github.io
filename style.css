@@ -1,0 +1,103 @@
+:root {
+  --primary-color: #00796b;
+  --link-color: #007bff;
+  --bg-gradient: linear-gradient(to right, #a1c4fd, #c2e9fb);
+  --font-family-main: 'Comic Sans MS', cursive, sans-serif;
+}
+
+body {
+  font-family: var(--font-family-main);
+  background: var(--bg-gradient);
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+.banner-img {
+  width: 150px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  margin-top: 10px;
+}
+
+.challenges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 10px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+}
+
+.card.locked {
+  opacity: 0.5;
+}
+
+.card a {
+  text-decoration: none;
+  color: var(--link-color);
+  font-weight: bold;
+}
+
+.badges {
+  margin-top: 40px;
+}
+
+.badge {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  background: #eee;
+}
+
+.badge.unlocked {
+  background: #d4edda;
+  border: 2px solid #28a745;
+}
+
+.side-img {
+  width: 180px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  margin-top: 30px;
+}
+
+.back {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.challenge-box {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin: auto;
+  max-width: 800px;
+}
+
+.button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+}
