@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Challenge 1 - Move the Robot</title>
+  <title>Challenge 1 - Complete the Blockly Games</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&family=Montserrat&display=swap" rel="stylesheet">
   <style>
@@ -24,18 +24,22 @@
 
   <!-- Challenge Section -->
   <main class="container mx-auto px-6 py-10 text-center">
-    <a href="index.html" class="inline-block mb-6 text-indigo-600 hover:underline">⬅️ Back to Home Page</a>
-    <h1 class="text-4xl font-bold text-indigo-700 mb-4">Challenge 1: Move the Robot</h1>
-    <p class="text-lg text-gray-600 mb-6">Use blocks to guide your robot through the maze 🧠🤖</p>
+    <h1 class="text-4xl font-bold text-indigo-700 mb-4">Challenge 1: Complete the Blockly Games</h1>
+    <p class="text-lg text-gray-600 mb-6">This game teaches you how to think like a programmer by solving puzzles using coding blocks. It’s like giving a robot step-by-step instructions to help it win! 🧠🕹️</p>
 
     <!-- Blockly Iframe -->
-    <div class="aspect-video w-full max-w-4xl mx-auto mb-6">
-      <iframe src="https://blockly.games/maze?lang=en&level=2" class="w-full h-full rounded shadow-lg border"></iframe>
+    <div class="w-full max-w-5xl mx-auto mb-6" style="height: 600px;">
+      <iframe src="https://blockly.games/maze?lang=en&level=2" class="w-full h-full rounded shadow-lg border" scrolling="no"></iframe>
     </div>
 
     <!-- Complete Button -->
     <button onclick="markComplete()" class="mt-4 bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg shadow transition">✅ I Did It!</button>
     <p id="feedback" class="mt-4 text-lg font-semibold text-green-600"></p>
+
+    <!-- Back Link -->
+    <div class="mt-10">
+      <a href="index.html" class="text-indigo-600 hover:underline">⬅️ Back to Home Page</a>
+    </div>
   </main>
 
   <!-- Footer -->
