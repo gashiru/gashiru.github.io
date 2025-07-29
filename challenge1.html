@@ -5,14 +5,23 @@
   <title>Challenges - Move the Robot</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
 <body>
+  <header class="site-header">
+    <h1>Code with Ite <img src="ite_pose.jpg" alt="Ite" class="banner-img" /></h1>
+    <nav><a href="index.html" class="button">Home</a></nav>
+  </header>
+  <div class="container">
   <div class="back"><a href="index.html" class="button">⬅️ Back to Home Page</a></div>
   <h1>Challenges - Move the Robot</h1>
-  <iframe src="https://blockly.games/maze?lang=en&level=2" style="width: 100%; height: 500px; border: none;"></iframe>
+  <iframe src="https://blockly.games/maze?lang=en&level=2"></iframe>
   <br><br>
   <button onclick="markComplete()" style="padding: 10px 20px; font-size: 1.2em;">✅ I Did It!</button>
   <p id="feedback"></p>
+  </div>
+  <footer class="site-footer">Built with ❤️ by Uncle Ayo</footer>
+
   <script>
     function markComplete() {
       localStorage.setItem('challenge1', 'complete');
