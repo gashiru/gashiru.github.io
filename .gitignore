@@ -1,0 +1,11 @@
+# Ignore Mac system files
+.DS_Store
+
+# Editor backups
+*~
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+
